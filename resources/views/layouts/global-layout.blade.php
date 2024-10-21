@@ -89,7 +89,7 @@
                     <div class="flex flex-col items-center">
                         <div class="flex items-start gap-16">
                             <div>
-                                <p class="text-black font-semibold text-center">Nagivate</p>
+                                <p class="text-black font-semibold text-center">Navigate</p>
                                 <ul class="text-center flex flex-col gap-2 mt-2">
                                     <li>
                                         <a href="" class="text-light text-black hover:underline">Home</a>
