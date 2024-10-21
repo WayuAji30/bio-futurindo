@@ -1,17 +1,30 @@
 <!doctype html>
-<html>
+<html prefix="og: https://ogp.me/ns#">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
+    <title>Bio Futurindo</title>
+    <meta property="og:description"
+        content="CV Bio Futurindo merupakan perusahaan yang bergerak di bidang usaha pengolahan biogas seperti perancangan, pembangunan, jasa konsultasi, jasa perbaikan, jasa edukasi mengenai proses dan teknologi biogas, serta penjualan dan layanan purna jual reaktor biogas." />
+    <meta property="og:determiner" content="the" />
+    <meta property="og:locale" content="id_IDN" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:site_name" content="Bio Futurindo" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 </head>
 
 <body>
     <nav id="navbar" class="w-full px-4 py-2 mx-auto bg-white bg-opacity-50 fixed top-0 shadow lg:px-8 lg:py-3 backdrop-blur-lg backdrop-saturate-150 z-[9999]">
         <div class="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
-            <a href="#"
+            <a href="/"
                 class="">
                 <img class="w-28" src="{{asset('assets/image/logo/logo-bio.png')}}" alt="logo-bio-futureindo">
             </a>
