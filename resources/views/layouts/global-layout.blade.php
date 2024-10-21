@@ -41,7 +41,8 @@
     </nav>
 
     <div>
-        <div id="drawer-content" class="fixed top-0 left-0 z-[9999] w-64 bg-black h-full transition-all duration-500 transform -translate-x-full shadow-lg peer-checked:translate-x-0">
+        <div onclick="closeDrawer()" id="close-drawer" class="absolute w-full h-full bg-black bg-opacity-20 hidden z-[9999]"></div>
+        <div id="drawer-content" class="fixed top-0 left-0 z-[99999] w-64 bg-white h-full transition-all duration-500 transform -translate-x-full shadow-lg peer-checked:translate-x-0">
             <div class="px-6 py-4">
                 <h2 class="text-lg font-semibold">Drawer</h2>
                 <p class="text-gray-500">This is a drawer.</p>
@@ -52,8 +53,9 @@
     @yield('content')
 
     <footer>
-        <div class="bg-footer">
-            <div class="mx-auto 2xl:container py-12">
+        <div class="relative">
+            <img class="absolute" src="{{asset('assets/image/footer/bg-footer.png')}}" alt="">
+            <div class="mx-auto 2xl:container py-12 absolute z-20 left-1/2 transform -translate-x-1/2">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-black max-w-[256px]"><span class="text-green-10 font-semibold">CV Bio Futurindo</span> is a company that focuses on biogas processing businesses.</p>
@@ -190,6 +192,12 @@
 <script async>
     function openDrawer() {
         document.getElementById('drawer-content').classList.remove('-translate-x-full')
+        document.getElementById('close-drawer').classList.remove('hidden')
+    }
+
+    function closeDrawer() {
+        document.getElementById('drawer-content').classList.add('-translate-x-full')
+        document.getElementById('close-drawer').classList.add('hidden')
     }
 </script>
 
