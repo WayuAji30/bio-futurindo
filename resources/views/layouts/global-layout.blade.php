@@ -12,7 +12,7 @@
         <div class="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
             <a href="#"
                 class="">
-                <img class="w-28" src="{{asset('assets/image/logo-bio.png')}}" alt="logo-bio-futureindo">
+                <img class="w-28" src="{{asset('assets/image/logo/logo-bio.png')}}" alt="logo-bio-futureindo">
             </a>
             <div class="hidden lg:block">
                 <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
