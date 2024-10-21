@@ -14,7 +14,11 @@ module.exports = withMT({
           10: "#254336", 
           30: "#6B8A7A", 
           50: "#008036", 
+          70: "#6B8A7A", 
         },
+        brown: {
+          10: "#B7B597"
+        }
       },
       backgroundImage: {
         'footer': "url('/public/assets/image/footer/bg-footer.png')", 
