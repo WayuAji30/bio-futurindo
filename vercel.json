@@ -6,8 +6,12 @@
     },
     "routes": [
         {
-            "src": "/assets/image/(.*\\.(png|ico))",
+            "src": "/assets/image/(.*\\.png)",
             "dest": "/public/assets/image/$1"
+        },
+        {
+            "src": "/favicon.ico",
+            "dest": "/public/favicon.ico"
         },
         {
             "src": "/build/assets/(.*\\.css)",
