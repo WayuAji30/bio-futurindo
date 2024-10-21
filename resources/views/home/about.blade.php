@@ -183,7 +183,7 @@
 <div class="mx-auto 2xl:container mt-40 mb-40">
     <p class="text-green-10 text-[44px] w-full leading-none font-semibold text-center">Get to Know Bio Futurindo</p>
     <div class="flex justify-center items-center gap-40 mt-20">
-        <button class="flex items-center gap-5 bg-green-30 p-5 rounded-2xl w-64">
+        <button onclick="openPDFBahasa()" class="flex items-center gap-5 bg-green-30 p-5 rounded-2xl w-64">
             <svg width="48" height="60" viewBox="0 0 48 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.58904 0C0.714793 0 0 0.714221 0 1.58959V57.6633C0 58.5387 0.714793 59.2529 1.58904 59.2529H46.4093C47.2852 59.2529 48 58.5381 48 57.6633V19.2357C48 18.3603 47.4947 17.1396 46.877 16.5214L31.4786 1.12411C30.8598 0.504784 29.6391 0 28.7643 0H1.58904Z" fill="#808080" />
                 <path d="M2.91543 1.05884C2.03949 1.05884 1.32471 1.77531 1.32471 2.64843V57.1343C1.32471 58.0079 2.03949 58.7244 2.91543 58.7244H45.8816C46.7547 58.7244 47.4712 58.0085 47.4712 57.1343V19.5C47.4712 18.6263 46.9642 17.4051 46.3465 16.7852L31.7432 2.18351C31.1244 1.56587 29.9043 1.05884 29.0294 1.05884H2.91543Z" fill="url(#paint0_linear_95_2788)" />
@@ -234,7 +234,7 @@
             </div>
         </button>
 
-        <button class="flex items-center gap-5 bg-green-30 p-5 rounded-2xl w-64">
+        <button onclick="openPDFEnglish()" class="flex items-center gap-5 bg-green-30 p-5 rounded-2xl w-64">
             <svg width="48" height="60" viewBox="0 0 48 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.58904 0C0.714793 0 0 0.714221 0 1.58959V57.6633C0 58.5387 0.714793 59.2529 1.58904 59.2529H46.4093C47.2852 59.2529 48 58.5381 48 57.6633V19.2357C48 18.3603 47.4947 17.1396 46.877 16.5214L31.4786 1.12411C30.8598 0.504784 29.6391 0 28.7643 0H1.58904Z" fill="#808080" />
                 <path d="M2.91543 1.05884C2.03949 1.05884 1.32471 1.77531 1.32471 2.64843V57.1343C1.32471 58.0079 2.03949 58.7244 2.91543 58.7244H45.8816C46.7547 58.7244 47.4712 58.0085 47.4712 57.1343V19.5C47.4712 18.6263 46.9642 17.4051 46.3465 16.7852L31.7432 2.18351C31.1244 1.56587 29.9043 1.05884 29.0294 1.05884H2.91543Z" fill="url(#paint0_linear_95_2788)" />
@@ -295,6 +295,14 @@
     document.getElementById('services').classList.add('text-green-10')
     document.getElementById('services').classList.remove('text-white')
     document.getElementById('navbar').classList.remove('bg-opacity-50', 'backdrop-blur-lg')
+
+    function openPDFBahasa() {
+        window.open('{{ asset("assets/pdf/try.pdf") }}', '_blank');
+    }
+
+    function openPDFEnglish() {
+        window.open('{{ asset("assets/pdf/try.pdf") }}', '_blank');
+    }
 </script>
 
 @endsection
