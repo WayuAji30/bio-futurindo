@@ -3,14 +3,14 @@
 
 <div class="mx-auto 2xl:container mt-40">
     <div class="flex items-center justify-between">
-        <div class="">
+        <div data-aos="fade-right" data-aos-duration="1500" class="">
             <div class="flex items-center gap-2">
                 <div class="w-1.5 h-10 bg-green-50 rounded-full"></div>
                 <p class="text-green-10 text-[44px] leading-none font-semibold text-center">Our Company Overview</p>
             </div>
             <p class="text-black text-lg max-w-[550px] mt-10"><span class="text-green-10">CV Bio Futurindo</span> is a company that focuses on biogas processing businesses such as design, construction, consulting services, repair services, educational services on biogas processes and technology, and biogas reactor sales and after-sales services.</p>
         </div>
-        <div class="">
+        <div data-aos="fade-left" data-aos-duration="1500" class="">
             <img class="w-[272px] h-[272px]" src="{{asset('assets/image/landing/about.png')}}" alt="">
         </div>
     </div>
@@ -18,7 +18,7 @@
 
 <div class="relative mt-32">
     <img class="w-full h-[500px] object-cover" src="{{asset('assets/image/landing/hero-about.png')}}" alt="hero">
-    <div class="bg-green-70 p-10 w-full max-w-[550px] absolute right-20 top-44">
+    <div data-aos="fade-up" data-aos-duration="1500" class="bg-green-70 p-10 w-full max-w-[550px] absolute right-20 top-44">
         <div class="flex items-center justify-end gap-2">
             <p class="text-white text-end text-2xl max-w-md font-semibold">We are an Officially Registered Business Entity Since 2023</p>
             <div class="w-1.5 h-14 bg-green-50 rounded-full"></div>
@@ -29,7 +29,7 @@
 
 <div class="mx-auto 2xl:container mt-40">
     <div class="flex items-center justify-between gap-10">
-        <div class="w-full">
+        <div data-aos="fade-up" data-aos-duration="1500" class="w-full">
             <div class="border-2 border-green-10 rounded-2xl p-10 min-h-80">
                 <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="56" height="56" rx="12" fill="#008036" />
@@ -39,7 +39,7 @@
                 <p class="text-black text-xl mt-5">Becoming the finest biogas processing business in Indonesia</p>
             </div>
         </div>
-        <div class="w-full">
+        <div data-aos="fade-up" data-aos-duration="1500" class="w-full">
             <div class="border-2 border-green-10 rounded-2xl p-10 min-h-80">
                 <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="56" height="56" rx="12" fill="#008036" />
@@ -94,11 +94,11 @@
 <div class="bg-brown-10 py-20">
     <div class="mx-auto 2xl:container">
         <div class="flex items-center justify-between">
-            <div class="w-full">
+            <div data-aos="fade-right" data-aos-duration="1500" class="w-full">
                 <p class="text-green-10 text-[44px] leading-none font-semibold">Our Goals</p>
                 <img class="w-[400px] h-[357px] mx-auto mt-10" src="{{asset('assets/image/landing/goals.png')}}" alt="">
             </div>
-            <div class="w-full">
+            <div data-aos="fade-left" data-aos-duration="1500" class="w-full">
                 <div class="flex flex-col gap-10">
                     <div class="flex items-center gap-5">
                         <div class="bg-green-30 rounded-l-full rounded-tr-full p-5">
@@ -160,20 +160,20 @@
         <p class="text-green-10 text-[44px] w-full leading-none font-semibold text-end">Meet The Founders<br /> of Bio Futurindo</p>
 
         <div class="flex items-center justify-between mt-20">
-            <div class="w-full">
+            <div data-aos="fade-right" data-aos-duration="1500" class="w-full">
                 <img class="w-[260px] h-[350px] mx-auto object-cover rounded-t-2xl border-b-[20px] border-green-10" src="{{asset('assets/image/landing/bayu.png')}}" alt="founder bio futureindo">
             </div>
             <div class="min-h-[300px] flex flex-col justify-between w-full">
-                <div>
+                <div data-aos="fade-right" data-aos-duration="1500">
                     <p class="text-2xl font-semibold text-green-10">Bayu Aji Prasetyo, S.Tr., MBA</p>
                     <p class="text-2xl mt-2 italic text-green-10">Founder</p>
                 </div>
-                <div>
+                <div data-aos="fade-left" data-aos-duration="2000">
                     <p class="text-2xl font-semibold text-green-10 text-end">Ir. Prasetiyadi, M.M.</p>
                     <p class="text-2xl mt-2 italic text-green-10 text-end">Co-Founder</p>
                 </div>
             </div>
-            <div class="w-full">
+            <div data-aos="fade-left" data-aos-duration="2000" class="w-full">
                 <img class="w-[260px] h-[350px] mx-auto object-cover rounded-t-2xl border-b-[20px] border-green-10" src="{{asset('assets/image/landing/prasetya.png')}}" alt="co-founder bio futureindo">
             </div>
         </div>
