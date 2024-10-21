@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <nav class="w-full px-4 py-2 mx-auto bg-white bg-opacity-50 fixed top-0 shadow lg:px-8 lg:py-3 backdrop-blur-lg backdrop-saturate-150 z-[9999]">
+    <nav id="navbar" class="w-full px-4 py-2 mx-auto bg-white bg-opacity-50 fixed top-0 shadow lg:px-8 lg:py-3 backdrop-blur-lg backdrop-saturate-150 z-[9999]">
         <div class="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
             <a href="#"
                 class="">
@@ -16,14 +16,14 @@
             </a>
             <div class="hidden lg:block">
                 <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-                    <li class="flex items-center p-1 gap-x-2 text-white font-semibold">
-                        <a href="#" class="flex items-center">Home</a>
+                    <li id="home" class="flex items-center p-1 gap-x-2 text-white font-semibold">
+                        <a href="/" class="flex items-center">Home</a>
                     </li>
-                    <li class="flex items-center p-1 gap-x-2 text-white font-semibold">
-                        <a href="#" class="flex items-center">About Us</a>
+                    <li id="about" class="flex items-center p-1 gap-x-2 text-white font-semibold">
+                        <a href="/about" class="flex items-center">About Us</a>
                     </li>
-                    <li class="flex items-center p-1 gap-x-2 text-white font-semibold">
-                        <a href="#" class="flex items-center">Services</a>
+                    <li id="services" class="flex items-center p-1 gap-x-2 text-white font-semibold">
+                        <a href="/services" class="flex items-center">Services</a>
                     </li>
                 </ul>
             </div>
@@ -79,13 +79,13 @@
                                 <p class="text-black font-semibold text-center">Nagivate</p>
                                 <ul class="text-center flex flex-col gap-2 mt-2">
                                     <li>
-                                        <a href="" class="text-light text-black">Home</a>
+                                        <a href="" class="text-light text-black hover:underline">Home</a>
                                     </li>
                                     <li>
-                                        <a href="" class="text-light text-black">About Us</a>
+                                        <a href="" class="text-light text-black hover:underline">About Us</a>
                                     </li>
                                     <li>
-                                        <a href="" class="text-light text-black">Services</a>
+                                        <a href="" class="text-light text-black hover:underline">Services</a>
                                     </li>
                                 </ul>
                             </div>
@@ -93,13 +93,13 @@
                                 <p class="text-black font-semibold text-center">Policies</p>
                                 <ul class="text-center flex flex-col gap-2 mt-2">
                                     <li>
-                                        <a href="" class="text-light text-black">Terms of Service</a>
+                                        <a href="" class="text-light text-black hover:underline">Terms of Service</a>
                                     </li>
                                     <li>
-                                        <a href="" class="text-light text-black">Maintenance Policy</a>
+                                        <a href="" class="text-light text-black hover:underline">Maintenance Policy</a>
                                     </li>
                                     <li>
-                                        <a href="" class="text-light text-black">Warranty Policy</a>
+                                        <a href="" class="text-light text-black hover:underline">Warranty Policy</a>
                                     </li>
                                 </ul>
                             </div>

@@ -63,4 +63,8 @@
 
 <br><br><br><br><br><br><br><br><br><br>
 
+<script async>
+    document.getElementById('home').classList.add('underline')
+</script>
+
 @endsection
