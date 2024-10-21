@@ -28,6 +28,7 @@
                 </ul>
             </div>
             <button
+                onclick="openDrawer()"
                 class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
                 type="button">
                 <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
@@ -38,6 +39,15 @@
             </button>
         </div>
     </nav>
+
+    <div>
+        <div id="drawer-content" class="fixed top-0 left-0 z-[9999] w-64 bg-black h-full transition-all duration-500 transform -translate-x-full shadow-lg peer-checked:translate-x-0">
+            <div class="px-6 py-4">
+                <h2 class="text-lg font-semibold">Drawer</h2>
+                <p class="text-gray-500">This is a drawer.</p>
+            </div>
+        </div>
+    </div>
 
     @yield('content')
 
@@ -176,5 +186,11 @@
         </div>
     </footer>
 </body>
+
+<script async>
+    function openDrawer() {
+        document.getElementById('drawer-content').classList.remove('-translate-x-full')
+    }
+</script>
 
 </html>
