@@ -54,12 +54,14 @@
         </div>
     </nav>
 
-    <div>
-        <div onclick="closeDrawer()" id="close-drawer" class="absolute w-full h-full bg-black bg-opacity-20 hidden z-[9999]"></div>
-        <div id="drawer-content" class="fixed top-0 left-0 z-[99999] w-64 bg-white h-full transition-all duration-500 transform -translate-x-full shadow-lg peer-checked:translate-x-0">
-            <div class="px-6 py-4">
-                <h2 class="text-lg font-semibold">Drawer</h2>
-                <p class="text-gray-500">This is a drawer.</p>
+    <div class="fixed top-0 z-[99999]">
+        <div id="drawer" class="relative">
+            <div onclick="closeDrawer()" id="close-drawer" class="h-screen w-screen bg-black opacity-15 hidden"></div>
+            <div id="drawer-content" class="absolute top-0 left-0 z-[99999] w-64 bg-white h-full transition-all duration-500 transform -translate-x-full shadow-lg peer-checked:translate-x-0">
+                <div class="px-6 py-4">
+                    <h2 class="text-lg font-semibold">Drawer</h2>
+                    <p class="text-gray-500">This is a drawer.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -67,7 +69,7 @@
     @yield('content')
 
     <footer>
-        <div class="relative">
+        <div class="relative z-0">
             <img class="absolute" src="{{asset('assets/image/footer/bg-footer.png')}}" alt="">
             <div class="mx-auto 2xl:container py-12 absolute z-20 left-1/2 transform -translate-x-1/2">
                 <div class="flex items-center justify-between">
