@@ -10,6 +10,10 @@
             "dest": "/public/assets/image/$1"
         },
         {
+            "src": "/assets/pdf/(.*\\.pdf)",
+            "dest": "/public/assets/pdf/$1"
+        },
+        {
             "src": "/favicon.ico",
             "dest": "/public/favicon.ico"
         },
