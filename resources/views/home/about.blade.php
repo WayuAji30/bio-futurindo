@@ -6,9 +6,9 @@
         <div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" class="">
             <div class="flex items-center gap-2">
                 <div class="w-1.5 h-10 bg-green-50 rounded-full"></div>
-                <p class="text-green-10 text-[44px] leading-none font-semibold text-center">Our Company Overview</p>
+                <p id="company" class="text-green-10 text-[44px] leading-none font-semibold text-center">Our Company Overview</p>
             </div>
-            <p class="text-black text-lg max-w-[550px] mt-10"><span class="text-green-10">CV Bio Futurindo</span> is a company that focuses on biogas processing businesses such as design, construction, consulting services, repair services, educational services on biogas processes and technology, and biogas reactor sales and after-sales services.</p>
+            <p id="descCompany" class="text-black text-lg max-w-[550px] mt-10"><span class="text-green-10">CV Bio Futurindo</span> is a company that focuses on biogas processing businesses such as design, construction, consulting services, repair services, educational services on biogas processes and technology, and biogas reactor sales and after-sales services.</p>
         </div>
         <div data-aos="fade-left" data-aos-duration="1500" data-aos-once="true" class="">
             <img class="w-[272px] h-[272px]" src="{{asset('assets/image/landing/about.png')}}" alt="">
@@ -20,10 +20,10 @@
     <img class="w-full h-[500px] object-cover" src="{{asset('assets/image/landing/hero-about.png')}}" alt="hero">
     <div data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" class="bg-green-70 p-10 w-full max-w-[550px] absolute right-20 top-44">
         <div class="flex items-center justify-end gap-2">
-            <p class="text-white text-end text-2xl max-w-md font-semibold">We are an Officially Registered Business Entity Since 2023</p>
+            <p id="register" class="text-white text-end text-2xl max-w-md font-semibold">We are an Officially Registered Business Entity Since 2023</p>
             <div class="w-1.5 h-14 bg-green-50 rounded-full"></div>
         </div>
-        <p class="text-white text-lg mt-10"><span class="font-semibold">We were founded</span> on Deed Number 08 dated September 15, 2023, signed by Notary Yurike Goldania, S.H., MKn. of Karawang Regency, Indonesia. According to the Justice Decree of the Ministry of Law and Human Rights of the Republic of Indonesia, number AHU-0058096-AH.01.14 of 2023, we have been registered in the Business Entity Administration System.</p>
+        <p id="descRegister" class="text-white text-lg mt-10"><span class="font-semibold">We were founded</span> on Deed Number 08 dated September 15, 2023, signed by Notary Yurike Goldania, S.H., MKn. of Karawang Regency, Indonesia. According to the Justice Decree of the Ministry of Law and Human Rights of the Republic of Indonesia, number AHU-0058096-AH.01.14 of 2023, we have been registered in the Business Entity Administration System.</p>
     </div>
 </div>
 
@@ -35,8 +35,8 @@
                     <rect width="56" height="56" rx="12" fill="#008036" />
                     <path d="M27.5901 45.1243C26.4633 45.1243 25.499 44.7146 24.6972 43.8951C23.8955 43.0756 23.4939 42.1024 23.4925 40.9756C23.4912 39.8487 23.8927 38.8844 24.6972 38.0827C25.5017 37.2809 26.466 36.8794 27.5901 36.878L28.8194 35.6999C29.0925 35.4268 29.4087 35.2137 29.768 35.0607C30.1272 34.9078 30.4939 34.8306 30.8682 34.8292C31.6535 34.8292 32.3282 35.1195 32.8923 35.6999C33.4564 36.2804 33.7378 36.9634 33.7364 37.7487V38.6195C33.7364 39.3024 33.9584 39.8658 34.4023 40.3097C34.8462 40.7536 35.4096 40.9756 36.0925 40.9756C36.6047 40.9756 37.0657 40.8219 37.4755 40.5146C37.8852 40.2073 38.1755 39.8146 38.3462 39.3365L38.9608 37.6463C39.2682 36.8268 39.7633 36.1527 40.4462 35.6241C41.1291 35.0956 41.9145 34.8306 42.8023 34.8292C43.1779 33.8731 43.477 32.8829 43.6997 31.8585C43.9223 30.8341 44.0329 29.7756 44.0316 28.6829C44.0316 25.6438 43.2721 22.8698 41.7533 20.3607C40.2345 17.8517 38.2451 15.8794 35.7852 14.4438V16.3902C35.7852 17.517 35.3843 18.482 34.5826 19.2851C33.7808 20.0882 32.8159 20.4891 31.6877 20.4878H29.6389V24.5853C29.6389 25.1658 29.4422 25.6527 29.0488 26.0461C28.6555 26.4395 28.1692 26.6355 27.5901 26.6341H25.5413V30.117C25.5413 30.8682 25.2852 31.4999 24.773 32.0121C24.2608 32.5243 23.6291 32.7804 22.8779 32.7804C22.3999 32.7804 21.9642 32.678 21.5708 32.4731C21.1774 32.2682 20.8619 31.978 20.6242 31.6024L17.3462 26.6341H15.2974V28.6829C15.2974 29.7414 14.9389 30.6463 14.2218 31.3975C13.5047 32.1487 12.6511 32.5926 11.6608 32.7292C12.5486 36.2804 14.4697 39.2341 17.4241 41.5902C20.3784 43.9463 23.7671 45.1243 27.5901 45.1243ZM31.6877 32.7804C31.1072 32.7804 30.6209 32.5844 30.2289 32.1924C29.8369 31.8004 29.6402 31.3135 29.6389 30.7317C29.6375 30.1498 29.8342 29.6636 30.2289 29.2729C30.6237 28.8823 31.1099 28.6856 31.6877 28.6829H33.7364C34.3169 28.6829 34.8039 28.8796 35.1972 29.2729C35.5906 29.6663 35.7866 30.1525 35.7852 30.7317C35.7839 31.3108 35.5872 31.7977 35.1952 32.1924C34.8032 32.5872 34.3169 32.7832 33.7364 32.7804H31.6877ZM36.4511 26.6341C35.7682 26.6341 35.23 26.3698 34.8366 25.8412C34.4433 25.3126 34.3497 24.7233 34.556 24.0731L35.3242 21.8195C35.4608 21.4097 35.6999 21.0853 36.0413 20.8463C36.3828 20.6073 36.7584 20.4878 37.1682 20.4878C37.8511 20.4878 38.3892 20.7527 38.7826 21.2827C39.176 21.8126 39.2695 22.4013 39.0633 23.0487L38.295 25.3024C38.1584 25.7121 37.9194 26.0365 37.5779 26.2756C37.2364 26.5146 36.8608 26.6341 36.4511 26.6341ZM27.5901 49.1707C24.756 49.1707 22.0925 48.6325 19.5999 47.5562C17.1072 46.4799 14.9389 45.0205 13.095 43.178C11.2511 41.3355 9.79166 39.1672 8.71674 36.6731C7.64181 34.1791 7.10366 31.5157 7.1023 28.6829C7.10093 25.8501 7.63908 23.1867 8.71674 20.6926C9.7944 18.1986 11.2538 16.0303 13.095 14.1878C14.9362 12.3452 17.1044 10.8858 19.5999 9.80951C22.0953 8.73321 24.7587 8.19507 27.5901 8.19507C30.4215 8.19507 33.0849 8.73321 35.5803 9.80951C38.0758 10.8858 40.2441 12.3452 42.0852 14.1878C43.9264 16.0303 45.3865 18.1986 46.4655 20.6926C47.5445 23.1867 48.082 25.8501 48.0779 28.6829C48.0738 31.5157 47.5357 34.1791 46.4635 36.6731C45.3913 39.1672 43.9319 41.3355 42.0852 43.178C40.2386 45.0205 38.0703 46.4806 35.5803 47.5583C33.0904 48.6359 30.427 49.1734 27.5901 49.1707Z" fill="white" />
                 </svg>
-                <p class="font-bold text-green-10 text-2xl mt-5">Our Vision</p>
-                <p class="text-black text-xl mt-5">Becoming the finest biogas processing business in Indonesia</p>
+                <p id="vision" class="font-bold text-green-10 text-2xl mt-5">Our Vision</p>
+                <p id="descVision" class="text-black text-xl mt-5">Becoming the finest biogas processing business in Indonesia</p>
             </div>
         </div>
         <div data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true" class="w-full">
@@ -45,8 +45,8 @@
                     <rect width="56" height="56" rx="12" fill="#008036" />
                     <path d="M28.2049 47.122C27.6244 47.122 27.1382 46.9253 26.7462 46.5319C26.3542 46.1385 26.1575 45.6523 26.1561 45.0732C26.1561 44.8341 26.2073 44.5862 26.3098 44.3295C26.4122 44.0727 26.5659 43.8425 26.7707 43.639L36.2464 34.1634L34.761 32.678L25.3366 42.1537C25.1317 42.3585 24.9098 42.5122 24.6707 42.6146C24.4317 42.7171 24.1756 42.7683 23.9025 42.7683C23.322 42.7683 22.8357 42.5723 22.4437 42.1803C22.0517 41.7883 21.855 41.3014 21.8537 40.7195C21.8537 40.378 21.9049 40.096 22.0073 39.8734C22.1098 39.6507 22.2464 39.4547 22.4171 39.2854L31.8927 29.8098L30.4585 28.3756L20.9829 37.8C20.7781 38.0049 20.5561 38.1585 20.3171 38.261C20.0781 38.3634 19.8049 38.4146 19.4976 38.4146C18.9512 38.4146 18.4732 38.2098 18.0634 37.8C17.6537 37.3902 17.4488 36.9122 17.4488 36.3659C17.4488 36.0927 17.5 35.8366 17.6025 35.5976C17.7049 35.3585 17.8585 35.1366 18.0634 34.9317L27.539 25.4561L26.0537 24.022L16.6293 33.4976C16.4585 33.6683 16.2537 33.8049 16.0146 33.9073C15.7756 34.0098 15.4854 34.061 15.1439 34.061C14.5634 34.061 14.0765 33.8643 13.6831 33.4709C13.2898 33.0776 13.0938 32.5913 13.0951 32.0122C13.0951 31.739 13.1464 31.4829 13.2488 31.2439C13.3512 31.0049 13.5049 30.7829 13.7098 30.5781L25.1317 19.1561L32.8146 26.8902C33.1903 27.2659 33.6342 27.565 34.1464 27.7876C34.6585 28.0102 35.1707 28.1209 35.6829 28.1195C36.7756 28.1195 37.7317 27.7357 38.5512 26.9681C39.3707 26.2005 39.7805 25.2184 39.7805 24.022C39.7805 23.5439 39.6951 23.0488 39.5244 22.5366C39.3537 22.0244 39.0464 21.5463 38.6024 21.1024L29.4342 11.9341C30.0146 11.3878 30.6634 10.9699 31.3805 10.6803C32.0976 10.3907 32.8146 10.2453 33.5317 10.2439C34.4195 10.2439 35.239 10.3894 35.9903 10.6803C36.7415 10.9712 37.4244 11.4233 38.039 12.0366L46.6951 20.7439C47.3098 21.3585 47.7625 22.0415 48.0535 22.7927C48.3444 23.5439 48.4892 24.4146 48.4878 25.4049C48.4878 26.0878 48.3342 26.7796 48.0268 27.4803C47.7195 28.181 47.2756 28.8209 46.6951 29.4L29.639 46.5073C29.3659 46.7805 29.1268 46.9512 28.922 47.0195C28.7171 47.0878 28.4781 47.122 28.2049 47.122ZM10.6366 30.7317L9.30489 29.4C8.7244 28.8537 8.2805 28.2049 7.97318 27.4537C7.66587 26.7024 7.51221 25.9171 7.51221 25.0976C7.51221 24.2098 7.68294 23.3902 8.0244 22.639C8.36587 21.8878 8.79269 21.2561 9.30489 20.7439L17.961 12.0366C18.5073 11.4902 19.1561 11.0545 19.9073 10.7295C20.6585 10.4044 21.3927 10.2425 22.1098 10.2439C23.0317 10.2439 23.8512 10.3723 24.5683 10.6291C25.2854 10.8859 25.9854 11.355 26.6683 12.0366L37.1683 22.5366C37.3732 22.7415 37.5268 22.9634 37.6293 23.2024C37.7317 23.4415 37.7829 23.6976 37.7829 23.9707C37.7829 24.5171 37.5781 24.9951 37.1683 25.4049C36.7585 25.8146 36.2805 26.0195 35.7342 26.0195C35.4268 26.0195 35.1707 25.9772 34.9659 25.8925C34.761 25.8078 34.539 25.6453 34.3 25.4049L25.0805 16.2878L10.6366 30.7317Z" fill="white" />
                 </svg>
-                <p class="font-bold text-green-10 text-2xl mt-5">Our Mission</p>
-                <p class="text-black text-xl mt-5">Running biogas processing businesses independently and/or integratedly based on the values of professionalism, ethics, and accountability</p>
+                <p id="mission" class="font-bold text-green-10 text-2xl mt-5">Our Mission</p>
+                <p id="descMission" class="text-black text-xl mt-5">Running biogas processing businesses independently and/or integratedly based on the values of professionalism, ethics, and accountability</p>
             </div>
         </div>
     </div>
@@ -54,8 +54,8 @@
 
 <div class="bg-green-70 w-full mt-24 py-14 rounded-t-3xl">
     <div class="mx-auto 2xl:container">
-        <p class="text-white text-[44px] leading-none font-semibold text-center">Our Achievement</p>
-        <p class="text-white text-base text-center mt-2">Discover our remarkable achievements that reflect our dedication, innovation, and tangible results achieved</p>
+        <p id="achievement" class="text-white text-[44px] leading-none font-semibold text-center">Our Achievement</p>
+        <p id="descAchievement" class="text-white text-base text-center mt-2">Discover our remarkable achievements that reflect our dedication, innovation, and tangible results achieved</p>
 
         <div class="flex items-start justify-between mt-20 gap-20">
             <div class="relative w-full">
@@ -95,7 +95,7 @@
     <div class="mx-auto 2xl:container">
         <div class="flex items-center justify-between">
             <div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" class="w-full">
-                <p class="text-green-10 text-[44px] leading-none font-semibold">Our Goals</p>
+                <p id="goals" class="text-green-10 text-[44px] leading-none font-semibold">Our Goals</p>
                 <img class="w-[400px] h-[357px] mx-auto mt-10" src="{{asset('assets/image/landing/goals.png')}}" alt="">
             </div>
             <div data-aos="fade-left" data-aos-duration="1500" data-aos-once="true" class="w-full">
@@ -112,7 +112,7 @@
                                 </defs>
                             </svg>
                         </div>
-                        <p class="text-black text-lg max-w-md">Fostering an awareness of environmental issues by actively participating in trash management</p>
+                        <p id="goals1" class="text-black text-lg max-w-md">Fostering an awareness of environmental issues by actively participating in trash management</p>
                     </div>
 
                     <div class="flex items-center gap-5">
@@ -127,7 +127,7 @@
                                 </defs>
                             </svg>
                         </div>
-                        <p class="text-black text-lg max-w-md">Contribute to preventing climate change</p>
+                        <p id="goals2" class="text-black text-lg max-w-md">Contribute to preventing climate change</p>
                     </div>
 
                     <div class="flex items-center gap-5">
@@ -147,7 +147,7 @@
                                 </defs>
                             </svg>
                         </div>
-                        <p class="text-black text-lg max-w-md">Participate in the creation and use of new renewable energy sources to help Indonesia become energy independent.</p>
+                        <p id="goals3" class="text-black text-lg max-w-md">Participate in the creation and use of new renewable energy sources to help Indonesia become energy independent.</p>
                     </div>
                 </div>
             </div>
@@ -157,7 +157,9 @@
 
 <div class="mx-auto 2xl:container mt-20">
     <div class="w-full">
-        <p class="text-green-10 text-[44px] w-full leading-none font-semibold text-end">Meet The Founders<br /> of Bio Futurindo</p>
+        <div class="flex justify-end">
+            <p id="meet" class="text-green-10 text-[44px] text-end w-full leading-none font-semibold max-w-[450px]">Meet The Founders of Bio Futurindo</p>
+        </div>
 
         <div class="flex items-center justify-between mt-20">
             <div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" class="w-full">
@@ -181,7 +183,7 @@
 </div>
 
 <div class="mx-auto 2xl:container mt-40 mb-40">
-    <p class="text-green-10 text-[44px] w-full leading-none font-semibold text-center">Get to Know Bio Futurindo</p>
+    <p id="cv" class="text-green-10 text-[44px] w-full leading-none font-semibold text-center">Get to Know Bio Futurindo</p>
     <div class="flex justify-center items-center gap-40 mt-20">
         <button onclick="openPDFBahasa()" class="flex items-center gap-5 bg-green-30 p-5 rounded-2xl w-64">
             <svg width="48" height="60" viewBox="0 0 48 60" fill="none" xmlns="http://www.w3.org/2000/svg">

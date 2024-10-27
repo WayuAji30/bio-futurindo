@@ -19,6 +19,17 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,13 +42,28 @@
             <div class="hidden lg:block">
                 <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
                     <li id="home" class="flex items-center p-1 gap-x-2 text-white font-semibold">
-                        <a href="/" class="flex items-center">Home</a>
+                        <a href="/" class="flex items-center">
+                            <p id="homeLink">Home</p>
+                        </a>
                     </li>
                     <li id="about" class="flex items-center p-1 gap-x-2 text-white font-semibold">
-                        <a href="/about" class="flex items-center">About Us</a>
+                        <a href="/about" class="flex items-center">
+                            <p id="aboutLink">About Us</p>
+                        </a>
                     </li>
                     <li id="services" class="flex items-center p-1 gap-x-2 text-white font-semibold">
-                        <a href="/services" class="flex items-center">Services</a>
+                        <a href="/services" class="flex items-center">
+                            <p id="servicesLink">Services</p>
+                        </a>
+                    </li>
+                    <li class="flex items-center p-1 gap-x-2 text-white font-semibold border-green-10 border-2 px-3 py-1 rounded-full">
+                        <button onclick="setLanguage('IDN')" class="text-green-10" id="btn-idn">
+                            IDN
+                        </button>
+                        <div class="w-[2px] h-5 bg-green-10"></div>
+                        <button onclick="setLanguage('ENG')" id="btn-eng" class="text-green-10">
+                            ENG
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -104,30 +130,42 @@
                     <div class="flex flex-col items-center">
                         <div class="flex items-start gap-16">
                             <div>
-                                <p class="text-black font-semibold text-center">Navigate</p>
+                                <p id="navigate" class="text-black font-semibold text-center">Navigate</p>
                                 <ul class="text-center flex flex-col gap-2 mt-2">
                                     <li>
-                                        <a href="" class="text-light text-black hover:underline">Home</a>
+                                        <a href="" class="text-light text-black hover:underline">
+                                            <p id="homeLinkFooter">Home</p>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="" class="text-light text-black hover:underline">About Us</a>
+                                        <a href="" class="text-light text-black hover:underline">
+                                            <p id="aboutLinkFooter">About Us</p>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="" class="text-light text-black hover:underline">Services</a>
+                                        <a href="" class="text-light text-black hover:underline">
+                                            <p id="servicesLinkFooter">Services</p>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <p class="text-black font-semibold text-center">Policies</p>
+                                <p id="policies" class="text-black font-semibold text-center">Policies</p>
                                 <ul class="text-center flex flex-col gap-2 mt-2">
                                     <li>
-                                        <a href="" class="text-light text-black hover:underline">Terms of Service</a>
+                                        <a href="" class="text-light text-black hover:underline">
+                                            <p id="termsLinkFooter">Terms of Service</p>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="" class="text-light text-black hover:underline">Maintenance Policy</a>
+                                        <a href="" class="text-light text-black hover:underline">
+                                            <p id="maintanceLinkFooter">Maintenance Policy</p>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="" class="text-light text-black hover:underline">Warranty Policy</a>
+                                        <a href="" class="text-light text-black hover:underline">
+                                            <p id="warrantyLinkFooter">Warranty Policy</p>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -205,6 +243,7 @@
     </footer>
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script async>
     AOS.init();
@@ -219,6 +258,217 @@
         document.getElementById('drawer-content').classList.add('-translate-x-full')
         document.getElementById('close-drawer').classList.add('hidden')
     }
+</script>
+<script>
+    function setLanguage(language) {
+        localStorage.setItem('selectedLanguage', language);
+
+        for (const key in content) {
+            const element = document.getElementById(key);
+            if (element) {
+                element.textContent = content[key][language];
+            }
+        }
+
+        const btnIDN = document.getElementById('btn-idn');
+        const btnENG = document.getElementById('btn-eng');
+
+        if (language === 'IDN') {
+            btnIDN.classList.add('text-green-10');
+            btnIDN.classList.remove('text-gray-400', 'opacity-50');
+            btnENG.classList.add('text-gray-400', 'opacity-50');
+            btnENG.classList.remove('text-green-10');
+        } else {
+            btnENG.classList.add('text-green-10');
+            btnENG.classList.remove('text-gray-400', 'opacity-50');
+            btnIDN.classList.add('text-gray-400', 'opacity-50');
+            btnIDN.classList.remove('text-green-10');
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const savedLanguage = localStorage.getItem('selectedLanguage') || 'IDN';
+        setLanguage(savedLanguage);
+    });
+
+    const content = {
+        homeLink: {
+            IDN: "Beranda",
+            ENG: "Home"
+        },
+        aboutLink: {
+            IDN: "Tentang Kami",
+            ENG: "About Us"
+        },
+        servicesLink: {
+            IDN: "Layanan",
+            ENG: "Services"
+        },
+        navigate: {
+            IDN: "Navigasi",
+            ENG: "Navigate"
+        },
+        homeLinkFooter: {
+            IDN: "Beranda",
+            ENG: "Home"
+        },
+        aboutLinkFooter: {
+            IDN: "Tentang Kami",
+            ENG: "About Us"
+        },
+        servicesLinkFooter: {
+            IDN: "Layanan",
+            ENG: "Services"
+        },
+        policies: {
+            IDN: "Kebijakan",
+            ENG: "Policies"
+        },
+        termsLinkFooter: {
+            IDN: "Ketentuan Layanan",
+            ENG: "Terms of Service"
+        },
+        maintanceLinkFooter: {
+            IDN: "Kebijakan Pemeliharaan",
+            ENG: "Maintenance Policy"
+        },
+        warrantyLinkFooter: {
+            IDN: "Kebijakan Garansi",
+            ENG: "Warranty Policy"
+        },
+        biogas: {
+            IDN: "Apa itu Biogas?",
+            ENG: "What is Biogas?"
+        },
+        descBiogas: {
+            IDN: "Biogas adalah gas yang dihasilkan ketika mikroba anaerobik memecah bahan organik. Metana (CH4), karbon dioksida (CO2), dan sejumlah gas lainnya merupakan komponen utama biogas.",
+            ENG: "Biogas is a gas that is created when anaerobic microbes break down organic materials. Methane (CH4), carbon dioxide (CO2), and a number of other gases are the major components of biogas."
+        },
+        whyBiogas: {
+            IDN: "Kenapa Biogas?",
+            ENG: "Why Biogas?"
+        },
+        whyBiogas: {
+            IDN: "Kenapa Biogas?",
+            ENG: "Why Biogas?"
+        },
+        titleWhy1: {
+            IDN: "Solusi Alternatif untuk Sampah Organik",
+            ENG: "Alternative Solution for Organic Waste"
+        },
+        descWhy1: {
+            IDN: "Mengelola limbah makanan dan limbah industri organik serta mengurangi jumlah limbah yang dikirim ke tempat pembuangan sampah.",
+            ENG: "Manages food waste and organic industrial waste and reducing the amount of waste sent to landfills."
+        },
+        titleWhy2: {
+            IDN: "Pengembangan Teknologi",
+            ENG: "Technological Development"
+        },
+        descWhy2: {
+            IDN: "Diperlukan untuk meningkatkan efisiensi produksi biogas dan mengatasi tantangan saat ini.",
+            ENG: "Necessary to improve biogas production efficiency and overcome current challenges."
+        },
+        titleWhy3: {
+            IDN: "Pengganti Bahan Bakar LPG",
+            ENG: "Substitute for LPG Fuel"
+        },
+        descWhy3: {
+            IDN: "Biogas dapat langsung digunakan sebagai sumber energi terbarukan, menggantikan LPG.",
+            ENG: "Biogas can be directly used as a renewable energy source, replacing LPG."
+        },
+        titleWhy4: {
+            IDN: "Berbagai Produk Sampingan yang Berharga",
+            ENG: "Multiple Valuable Byproducts"
+        },
+        descWhy4: {
+            IDN: "Produk sampingan organik dari biogas dapat digunakan sebagai pupuk tanaman, sementara prosesnya juga mengurangi polusi lingkungan dengan mengelola limbah organik dan membantu menurunkan emisi gas rumah kaca, sehingga berkontribusi terhadap keberlanjutan lingkungan.",
+            ENG: "Organic byproducts from biogas can be used as plant fertilizers, while the process also reduces environmental pollution by managing organic waste and helps lower greenhouse gas emissions, contributing to environmental sustainability."
+        },
+        clientSay: {
+            IDN: "Apa Kata Klien Kami",
+            ENG: "What Our Clients Say"
+        },
+        company: {
+            IDN: "Gambaran Umum Perusahaan Kami",
+            ENG: "Our Company Overview"
+        },
+        descCompany: {
+            IDN: "CV Bio Futurindo merupakan perusahaan yang bergerak di bidang usaha pengolahan biogas seperti perancangan, pembangunan, jasa konsultasi, jasa perbaikan, jasa edukasi mengenai proses dan teknologi biogas, serta penjualan dan layanan purna jual reaktor biogas.",
+            ENG: "CV Bio Futurindo is a company that focuses on biogas processing businesses such as design, construction, consulting services, repair services, educational services on biogas processes and technology, and biogas reactor sales and after-sales services."
+        },
+        register: {
+            IDN: "Kami adalah Badan Usaha Terdaftar Resmi Sejak 2023",
+            ENG: "We are an Officially Registered Business Entity Since 2023"
+        },
+        descRegister: {
+            IDN: "Kami didirikan berdasarkan Akta Nomor 08 tanggal 15 September 2023, yang ditandatangani oleh Notaris Yurike Goldania, S.H., MKn. dari Kabupaten Karawang, Indonesia. Berdasarkan Keputusan Menteri Hukum dan Hak Asasi Manusia Republik Indonesia, nomor AHU-0058096-AH.01.14 tahun 2023, kami telah terdaftar dalam Sistem Administrasi Badan Usaha.",
+            ENG: "We were founded on Deed Number 08 dated September 15, 2023, signed by Notary Yurike Goldania, S.H., MKn. of Karawang Regency, Indonesia. According to the Justice Decree of the Ministry of Law and Human Rights of the Republic of Indonesia, number AHU-0058096-AH.01.14 of 2023, we have been registered in the Business Entity Administration System."
+        },
+        vision: {
+            IDN: "Visi Kami",
+            ENG: "Our Vision"
+        },
+        descVision: {
+            IDN: "Menjadi bisnis pengolahan biogas terbaik di Indonesia",
+            ENG: "Becoming the finest biogas processing business in Indonesia"
+        },
+        mission: {
+            IDN: "Misi Kami",
+            ENG: "Our Mission"
+        },
+        descMission: {
+            IDN: "Menjalankan usaha pengolahan biogas secara mandiri dan/atau terpadu berdasarkan nilai-nilai profesionalisme, etika, dan akuntabilitas.",
+            ENG: "Running biogas processing businesses independently and/or integratedly based on the values of professionalism, ethics, and accountability"
+        },
+        achievement: {
+            IDN: "Prestasi Kami",
+            ENG: "Our Achievement"
+        },
+        descAchievement: {
+            IDN: "Temukan pencapaian luar biasa kami yang mencerminkan dedikasi, inovasi, dan hasil nyata yang kami capai",
+            ENG: "Discover our remarkable achievements that reflect our dedication, innovation, and tangible results achieved"
+        },
+        goals: {
+            IDN: "Tujuan Kami",
+            ENG: "Our Goals"
+        },
+        goals1: {
+            IDN: "Menumbuhkan kesadaran terhadap masalah lingkungan dengan berpartisipasi aktif dalam pengelolaan sampah",
+            ENG: "Fostering an awareness of environmental issues by actively participating in trash management"
+        },
+        goals2: {
+            IDN: "Berkontribusi untuk mencegah perubahan iklim",
+            ENG: "Contribute to preventing climate change"
+        },
+        goals3: {
+            IDN: "Berpartisipasi dalam penciptaan dan pemanfaatan sumber energi baru terbarukan untuk membantu Indonesia menjadi mandiri dalam energi.",
+            ENG: "Participate in the creation and use of new renewable energy sources to help Indonesia become energy independent."
+        },
+        meet: {
+            IDN: "Temui Para Pendiri dari Bio Futurindo",
+            ENG: "Meet The Founders of Bio Futurindo"
+        },
+        cv: {
+            IDN: "Mengenal Bio Futurindo",
+            ENG: "Get to Know Bio Futurindo"
+        },
+        sobatbio: {
+            IDN: "Mengenal Bio FuturindoSeluruh Sobat Bio/Sahabat Bio baik masyarakat, lembaga, maupun swasta dapat turut ambil bagian untuk bersama-sama mengatasi permasalahan sampah organik sekaligus memanfaatkan energi terbarukan berupa biogas dan pupuk cair melalui penerapan program-program yang tepat.",
+            ENG: "All Sobat Bio / Bio Friends, including people, organizations, and private communities, can take part in working together to solve the issue of organic waste while also obtaining the advantages of renewable energy in the form of biogas and liquid fertilizer through the implementation of the suitable programs."
+        },
+        discover: {
+            IDN: "Temukan Layanan Paling Populer",
+            ENG: "Discover Most Popular Services"
+        },
+        portfolio: {
+            IDN: "Portofolio",
+            ENG: "Portfolio"
+        },
+        experience: {
+            IDN: "Rasakan Perjalanan Kami",
+            ENG: "Experience Our Journey"
+        },
+    };
 </script>
 
 </html>
