@@ -6,8 +6,8 @@
 </div>
 
 <section>
-    <div class="mx-auto 2xl:container mt-28">
-        <div class="flex items-center justify-between">
+    <div class="mx-auto 2xl:container mt-28 sm:px-6">
+        <div class="flex sm:flex-col md:flex-col md:gap-10 items-center justify-between">
             <div>
                 <p id="biogas" class="text-green-10 text-[44px] leading-none font-semibold">What is Biogas?</p>
                 <p id="descBiogas" class="text-2xl text-green-10 max-w-[600px] mt-5">Biogas is a gas that is created when anaerobic microbes break down organic materials. Methane (CH4), carbon dioxide (CO2), and a number of other gases are the major components of biogas.</p>
@@ -20,10 +20,10 @@
 </section>
 
 <section>
-    <div class="mx-auto 2xl:container mt-14">
+    <div class="mx-auto 2xl:container lg:mt-14 mt-20 sm:px-6 md:px-12">
         <p id="whyBiogas" class="text-green-10 text-[44px] leading-none font-semibold">Why Biogas?</p>
-        <div class="flex items-center justify-between gap-7 mt-8">
-            <div class="bg-green-10 rounded-2xl py-4 px-6 w-full max-w-[400px]">
+        <div class="flex sm:flex-col md:flex-col items-center justify-between gap-7 mt-8">
+            <div class="bg-green-10 rounded-2xl py-4 px-6 w-full lg:max-w-[400px]">
                 <p id="titleWhy1" class="text-2xl font-semibold text-white">Alternative Solution for Organic Waste</p>
                 <p id="descWhy1" class="text-white text-lg mt-4">Manages food waste and organic industrial waste and reducing the amount of waste sent to landfills.</p>
             </div>
@@ -34,8 +34,8 @@
             </div>
         </div>
 
-        <div class="flex items-center justify-between gap-7 mt-8">
-            <div class="bg-green-10 rounded-2xl py-4 px-6 w-full max-w-[300px]">
+        <div class="flex sm:flex-col md:flex-col items-center justify-between gap-7 mt-8">
+            <div class="bg-green-10 rounded-2xl py-4 px-6 w-full lg:max-w-[300px]">
                 <p id="titleWhy3" class=" text-2xl font-semibold text-white">Substitute for LPG Fuel</p>
                 <p id="descWhy3" class="text-white text-lg mt-4">Biogas can be directly used as a renewable energy source, replacing LPG.</p>
             </div>

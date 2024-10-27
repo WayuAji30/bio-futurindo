@@ -1,14 +1,14 @@
 @extends('layouts.global-layout')
 @section('content')
 
-<div class="mx-auto 2xl:container mt-40">
-    <div class="flex items-center justify-between">
+<div class="mx-auto 2xl:container mt-40 sm:px-6 md:px-12">
+    <div class="flex sm:flex-col-reverse md:flex-col-reverse md:gap-10 sm:gap-5 items-center justify-between">
         <div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" class="">
             <div class="flex items-center gap-2">
-                <div class="w-1.5 h-10 bg-green-50 rounded-full"></div>
+                <div class="w-1.5 h-10 bg-green-50 rounded-full sm:hidden md:hidden"></div>
                 <p id="company" class="text-green-10 text-[44px] leading-none font-semibold text-center">Our Company Overview</p>
             </div>
-            <p id="descCompany" class="text-black text-lg max-w-[550px] mt-10"><span class="text-green-10">CV Bio Futurindo</span> is a company that focuses on biogas processing businesses such as design, construction, consulting services, repair services, educational services on biogas processes and technology, and biogas reactor sales and after-sales services.</p>
+            <p id="descCompany" class="text-black text-lg lg:max-w-[550px] mt-10 sm:text-center md:text-center"><span class="text-green-10">CV Bio Futurindo</span> is a company that focuses on biogas processing businesses such as design, construction, consulting services, repair services, educational services on biogas processes and technology, and biogas reactor sales and after-sales services.</p>
         </div>
         <div data-aos="fade-left" data-aos-duration="1500" data-aos-once="true" class="">
             <img class="w-[272px] h-[272px]" src="{{asset('assets/image/landing/about.png')}}" alt="">
@@ -27,8 +27,8 @@
     </div>
 </div>
 
-<div class="mx-auto 2xl:container mt-40">
-    <div class="flex items-center justify-between gap-10">
+<div class="mx-auto 2xl:container mt-40 sm:px-6 md:px-12">
+    <div class="flex sm:flex-col md:flex-col items-center justify-between gap-10">
         <div data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true" class="w-full">
             <div class="border-2 border-green-10 rounded-2xl p-10 min-h-80">
                 <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,15 +52,15 @@
     </div>
 </div>
 
-<div class="bg-green-70 w-full mt-24 py-14 rounded-t-3xl">
+<div class="bg-green-70 w-full mt-24 py-14 rounded-t-3xl sm:px-6 md:px-12">
     <div class="mx-auto 2xl:container">
         <p id="achievement" class="text-white text-[44px] leading-none font-semibold text-center">Our Achievement</p>
         <p id="descAchievement" class="text-white text-base text-center mt-2">Discover our remarkable achievements that reflect our dedication, innovation, and tangible results achieved</p>
 
-        <div class="flex items-start justify-between mt-20 gap-20">
+        <div class="flex sm:flex-col md:flex-col items-start justify-between mt-20 gap-20">
             <div class="relative w-full">
-                <img class="w-[600px] h-[550px] object-cover" src="{{asset('assets/image/landing/achievement.png')}}" alt="">
-                <div class="from-black w-[600px] h-[550px] bg-gradient-to-t opacity-50 absolute top-0"></div>
+                <img class="w-[600px] h-[550px] md:w-full sm:w-full object-cover" src="{{asset('assets/image/landing/achievement.png')}}" alt="">
+                <div class="from-black w-[600px] sm:w-full h-[550px] bg-gradient-to-t opacity-50 absolute top-0"></div>
             </div>
             <div class="w-full flex flex-col justify-between min-h-[550px]">
                 <div>
@@ -91,14 +91,14 @@
     </div>
 </div>
 
-<div class="bg-brown-10 py-20">
+<div class="bg-brown-10 py-20 sm:px-6">
     <div class="mx-auto 2xl:container">
-        <div class="flex items-center justify-between">
+        <div class="flex sm:flex-col md:flex-col md:gap-10 sm:gap-10 items-center justify-between">
             <div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" class="w-full">
-                <p id="goals" class="text-green-10 text-[44px] leading-none font-semibold">Our Goals</p>
+                <p id="goals" class="text-green-10 text-[44px] leading-none font-semibold md:text-center">Our Goals</p>
                 <img class="w-[400px] h-[357px] mx-auto mt-10" src="{{asset('assets/image/landing/goals.png')}}" alt="">
             </div>
-            <div data-aos="fade-left" data-aos-duration="1500" data-aos-once="true" class="w-full">
+            <div data-aos="fade-left" data-aos-duration="1500" data-aos-once="true" class="w-full md:flex md:justify-center">
                 <div class="flex flex-col gap-10">
                     <div class="flex items-center gap-5">
                         <div class="bg-green-30 rounded-l-full rounded-tr-full p-5">
@@ -155,17 +155,17 @@
     </div>
 </div>
 
-<div class="mx-auto 2xl:container mt-20">
+<div class="mx-auto 2xl:container mt-20 sm:px-6">
     <div class="w-full">
         <div class="flex justify-end">
             <p id="meet" class="text-green-10 text-[44px] text-end w-full leading-none font-semibold max-w-[450px]">Meet The Founders of Bio Futurindo</p>
         </div>
 
-        <div class="flex items-center justify-between mt-20">
+        <div class="flex sm:flex-col items-center justify-between mt-20">
             <div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" class="w-full">
                 <img class="w-[260px] h-[350px] mx-auto object-cover rounded-t-2xl border-b-[20px] border-green-10" src="{{asset('assets/image/landing/bayu.png')}}" alt="founder bio futureindo">
             </div>
-            <div class="min-h-[300px] flex flex-col justify-between w-full">
+            <div class="min-h-[300px] sm:min-h-[200px] flex flex-col justify-between w-full">
                 <div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
                     <p class="text-2xl font-semibold text-green-10">Bayu Aji Prasetyo, S.Tr., MBA</p>
                     <p class="text-2xl mt-2 italic text-green-10">Founder</p>
@@ -184,7 +184,7 @@
 
 <div class="mx-auto 2xl:container mt-40 mb-40">
     <p id="cv" class="text-green-10 text-[44px] w-full leading-none font-semibold text-center">Get to Know Bio Futurindo</p>
-    <div class="flex justify-center items-center gap-40 mt-20">
+    <div class="flex sm:flex-col sm:gap-10 justify-center items-center gap-40 mt-20">
         <button onclick="openPDFBahasa()" class="flex items-center gap-5 bg-green-30 p-5 rounded-2xl w-64">
             <svg width="48" height="60" viewBox="0 0 48 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.58904 0C0.714793 0 0 0.714221 0 1.58959V57.6633C0 58.5387 0.714793 59.2529 1.58904 59.2529H46.4093C47.2852 59.2529 48 58.5381 48 57.6633V19.2357C48 18.3603 47.4947 17.1396 46.877 16.5214L31.4786 1.12411C30.8598 0.504784 29.6391 0 28.7643 0H1.58904Z" fill="#808080" />

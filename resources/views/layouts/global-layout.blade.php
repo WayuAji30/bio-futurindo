@@ -13,7 +13,6 @@
     <meta property="og:locale:alternate" content="en_GB" />
     <meta property="og:locale:alternate" content="es_ES" />
     <meta property="og:site_name" content="Bio Futurindo" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -83,11 +82,28 @@
     <div class="fixed top-0 z-[99999]">
         <div id="drawer" class="relative">
             <div onclick="closeDrawer()" id="close-drawer" class="h-screen w-screen bg-black opacity-15 hidden"></div>
-            <div id="drawer-content" class="absolute top-0 left-0 z-[99999] w-64 bg-white h-full transition-all duration-500 transform -translate-x-full shadow-lg peer-checked:translate-x-0">
-                <div class="px-6 py-4">
-                    <h2 class="text-lg font-semibold">Drawer</h2>
-                    <p class="text-gray-500">This is a drawer.</p>
-                </div>
+            <div id="drawer-content" class="absolute top-0 left-0 z-[99999] w-64 bg-white h-full transition-all duration-500 transform -translate-x-full shadow-lg peer-checked:translate-x-0 px-6">
+                <a href="/"
+                    class="pl-6">
+                    <img class="w-28" src="{{asset('assets/image/logo/logo-bio.png')}}" alt="logo-bio-futureindo">
+                </a>
+                <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 mt-5">
+                    <li id="homeDrawer" class="flex items-center p-1 gap-x-2 text-black font-semibold">
+                        <a href="/" class="flex items-center">
+                            <p id="homeLinkDrawer">Home</p>
+                        </a>
+                    </li>
+                    <li id="aboutDrawer" class="flex items-center p-1 gap-x-2 text-black font-semibold">
+                        <a href="/about" class="flex items-center">
+                            <p id="aboutLinkDrawer">About Us</p>
+                        </a>
+                    </li>
+                    <li id="servicesDrawer" class="flex items-center p-1 gap-x-2 text-black font-semibold">
+                        <a href="/services" class="flex items-center">
+                            <p id="servicesLinkDrawer">Services</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -96,9 +112,9 @@
 
     <footer>
         <div class="relative z-0">
-            <img class="absolute" src="{{asset('assets/image/footer/bg-footer.png')}}" alt="">
+            <img class="absolute sm:h-[900px] md:h-[850px]" src="{{asset('assets/image/footer/bg-footer.png')}}" alt="">
             <div class="mx-auto 2xl:container py-12 absolute z-20 left-1/2 transform -translate-x-1/2">
-                <div class="flex items-center justify-between">
+                <div class="flex sm:flex-col md:flex-col md:gap-10 sm:gap-10 items-center justify-between">
                     <div>
                         <p class="text-black max-w-[256px]"><span class="text-green-10 font-semibold">CV Bio Futurindo</span> is a company that focuses on biogas processing businesses.</p>
 
@@ -470,5 +486,28 @@
         },
     };
 </script>
+
+<script>
+    function loadAOSStylesheet() {
+        if (window.innerWidth >= 1440) { // Ukuran layar besar
+            const aosStylesheet = document.createElement('link');
+            aosStylesheet.rel = 'stylesheet';
+            aosStylesheet.href = 'https://unpkg.com/aos@2.3.1/dist/aos.css';
+            aosStylesheet.id = 'aos-stylesheet';
+            document.head.appendChild(aosStylesheet);
+        } else {
+            // Menghapus stylesheet jika ukuran layar lebih kecil dari large
+            const existingAOSStylesheet = document.getElementById('aos-stylesheet');
+            if (existingAOSStylesheet) {
+                existingAOSStylesheet.remove();
+            }
+        }
+    }
+
+    // Panggil fungsi saat halaman dimuat dan saat ukuran layar diubah
+    loadAOSStylesheet();
+    window.addEventListener('resize', loadAOSStylesheet);
+</script>
+
 
 </html>
