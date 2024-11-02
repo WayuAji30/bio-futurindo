@@ -18,7 +18,7 @@
 
 <div class="relative mt-32">
     <img class="w-full h-[500px] object-cover" src="{{asset('assets/image/landing/hero-about.png')}}" alt="hero">
-    <div data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" class="bg-green-70 p-10 w-full max-w-[550px] absolute right-20 top-44">
+    <div data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" class="bg-green-70 p-10 w-full max-w-[550px] sm:max-w-[350px] absolute right-20 sm:right-6 sm:top-12 top-44">
         <div class="flex items-center justify-end gap-2">
             <p id="register" class="text-white text-end text-2xl max-w-md font-semibold">We are an Officially Registered Business Entity Since 2023</p>
             <div class="w-1.5 h-14 bg-green-50 rounded-full"></div>
@@ -59,17 +59,47 @@
 
         <div class="flex sm:flex-col md:flex-col items-start justify-between mt-20 gap-20">
             <div class="relative w-full">
-                <img class="w-[600px] h-[550px] md:w-full sm:w-full object-cover" src="{{asset('assets/image/landing/achievement.png')}}" alt="">
+                <img id="achievement_image_1" class="w-[600px] h-[550px] md:w-full sm:w-full object-cover opacity-100 duration-200 transition-all ease-linear" src="{{asset('assets/image/landing/achievement_1.png')}}" alt="">
                 <div class="from-black w-[600px] sm:w-full h-[550px] bg-gradient-to-t opacity-50 absolute top-0"></div>
             </div>
             <div class="w-full flex flex-col justify-between min-h-[550px]">
                 <div>
-                    <div>
-                        <p class="text-white text-xl font-semibold">1st place</p>
-                        <p class="text-white mt-2 max-w-sm">Bekasi City Level Innovative Appropriate Technology Competition for the design of the BIOSAKA-1 household scale biogas reactor</p>
+                    <div id="achievement">
+                        <p class="text-white text-xl font-semibold">
+                            <span id="title_1" class="duration-200 transition-all ease-linear">
+                                1st place
+                            </span>
+                            <span id="title_2" class="hidden duration-200 transition-all ease-linear">
+                                2st place
+                            </span>
+                            <span id="title_3" class="hidden duration-200 transition-all ease-linear">
+                                3st place
+                            </span>
+                        </p>
+                        <p class="text-white mt-2 max-w-sm">
+                            <span id="name_event_1" class="duration-200 transition-all ease-linear">
+                                Bekasi City Level Innovative Appropriate Technology Competition for the design of the BIOSAKA-1 household scale biogas reactor
+                            </span>
+                            <span id="name_event_2" class="hidden duration-200 transition-all ease-linear">
+                                Bekasi City Level Innovative Appropriate Technology Competition for the design of the BIOSAKA-1 household scale biogas reactor
+                            </span>
+                            <span id="name_event_3" class="hidden duration-200 transition-all ease-linear">
+                                Bekasi City Level Innovative Appropriate Technology Competition for the design of the BIOSAKA-1 household scale biogas reactor
+                            </span>
+                        </p>`
                     </div>
                     <div class="bg-white mt-12 rounded-tl-2xl rounded-br-2xl p-5 border-l-[20px] border-brown-10">
-                        <p class="text-green-10">Desc about achievement/event..</p>
+                        <p class="text-green-10">
+                            <span id="description_1" class="duration-200 transition-all ease-linear">
+                                Desc about achievement/event..
+                            </span>
+                            <span id="description_2" class="hidden duration-200 transition-all ease-linear">
+                                Desc about achievement/event..
+                            </span>
+                            <span id="description_3" class="hidden duration-200 transition-all ease-linear">
+                                Desc about achievement/event..
+                            </span>
+                        </p>
                     </div>
                 </div>
                 <div class="flex items-center gap-5 justify-end">
@@ -306,5 +336,40 @@
         window.open('{{ asset("assets/pdf/try.pdf") }}', '_blank');
     }
 </script>
+
+<script>
+    let currentComponent = 1;
+
+    function updateComponent() {
+        document.getElementById('title_1').classList.add('hidden');
+        document.getElementById('name_event_1').classList.add('hidden');
+        document.getElementById('description_1').classList.add('hidden');
+
+        document.getElementById('title_2').classList.add('hidden');
+        document.getElementById('name_event_2').classList.add('hidden');
+        document.getElementById('description_2').classList.add('hidden');
+
+        document.getElementById('title_3').classList.add('hidden');
+        document.getElementById('name_event_3').classList.add('hidden');
+        document.getElementById('description_3').classList.add('hidden');
+
+        document.getElementById(`title_${currentComponent}`).classList.remove('hidden');
+        document.getElementById(`name_event_${currentComponent}`).classList.remove('hidden');
+        document.getElementById(`description_${currentComponent}`).classList.remove('hidden');
+    }
+
+    document.getElementById('next-achievement').addEventListener('click', () => {
+        currentComponent = currentComponent === 3 ? 1 : currentComponent + 1;
+        updateComponent();
+    });
+
+    document.getElementById('prev-achievement').addEventListener('click', () => {
+        currentComponent = currentComponent === 1 ? 3 : currentComponent - 1;
+        updateComponent();
+    });
+
+    updateComponent();
+</script>
+
 
 @endsection

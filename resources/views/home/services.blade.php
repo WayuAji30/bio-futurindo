@@ -19,34 +19,15 @@
         <p id="discover" class="text-white text-[44px] leading-none font-semibold text-center">Discover Most Popular Services</p>
 
         <div class="whitespace-nowrap overflow-x-auto w-full mt-20 no-scrollbar">
-            <div class="flex items-center w-full gap-20">
-                <div class="relative shrink-0 ml-20">
-                    <img class="w-[400px] h-[500px] sm:w-[250px] sm:h-[350px] object-cover rounded-3xl" src="{{asset('assets/image/landing/popular.png')}}" alt="">
-                    <div class="from-black w-[400px] h-[500px] sm:w-[250px] sm:h-[350px] rounded-3xl bg-gradient-to-t opacity-50 absolute top-0"></div>
-
-                    <p class="uppercase text-white text-xl font-semibold absolute bottom-16 left-5">BIO ENERGY SERVICES</p>
-                </div>
-
+            <div class="flex items-center w-full gap-20 mx-20">
+                @foreach($services as $service)
                 <div class="relative shrink-0">
-                    <img class="w-[400px] h-[500px] sm:w-[250px] sm:h-[350px] object-cover rounded-3xl" src="{{asset('assets/image/landing/popular.png')}}" alt="">
+                    <img class="w-[400px] h-[500px] sm:w-[250px] sm:h-[350px] object-cover rounded-3xl" src="{{asset('storage/'.$service->image)}}" alt="">
                     <div class="from-black w-[400px] h-[500px] sm:w-[250px] sm:h-[350px] rounded-3xl bg-gradient-to-t opacity-50 absolute top-0"></div>
 
-                    <p class="uppercase text-white text-xl font-semibold absolute bottom-16 left-5">BIO ENERGY SERVICES</p>
+                    <p class="uppercase text-white text-xl font-semibold absolute bottom-16 left-5">{{$service->title}}</p>
                 </div>
-
-                <div class="relative shrink-0">
-                    <img class="w-[400px] h-[500px] sm:w-[250px] sm:h-[350px] object-cover rounded-3xl" src="{{asset('assets/image/landing/popular.png')}}" alt="">
-                    <div class="from-black w-[400px] h-[500px] sm:w-[250px] sm:h-[350px] rounded-3xl bg-gradient-to-t opacity-50 absolute top-0"></div>
-
-                    <p class="uppercase text-white text-xl font-semibold absolute bottom-16 left-5">BIO ENERGY SERVICES</p>
-                </div>
-
-                <div class="relative shrink-0 pr-20">
-                    <img class="w-[400px] h-[500px] sm:w-[250px] sm:h-[350px] object-cover rounded-3xl" src="{{asset('assets/image/landing/popular.png')}}" alt="">
-                    <div class="from-black w-[400px] h-[500px] sm:w-[250px] sm:h-[350px] rounded-3xl bg-gradient-to-t opacity-50 absolute top-0"></div>
-
-                    <p class="uppercase text-white text-xl font-semibold absolute bottom-16 left-5">BIO ENERGY SERVICES</p>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -54,48 +35,41 @@
 
 <div class="mx-auto 2xl:container mt-20">
     <p id="portfolio" class="text-green-10 text-[44px] leading-none font-semibold text-center">Portfolio</p>
-    <swiper-container class="mySwiper mt-20 mb-16 w-full" pagination="false" navigation="true">
+    <swiper-container class="mySwiper mt-20 mb-16 w-full sm:hidden md:hidden" pagination="false" navigation="true">
         <swiper-slide class="flex items-center justify-center gap-20 w-full">
+            @foreach ($portfolio_chunk[0] as $item)
             <div class="bg-green-30 rounded-2xl w-fit">
-                <img class="w-72 h-64 object-cover rounded-t-2xl" src="{{asset('assets/image/landing/popular.png')}}" alt="">
-                <p class="font-semibold text-2xl text-white w-72 text-center mt-3">Teaching & Education</p>
-                <p class="text-white w-72 text-center mt-6">Deksripsi Kegiatan</p>
-                <p class="text-white w-72 text-center mt-6 pb-5">SD 01 Bekasi | 28 September 2024</p>
+                <img class="w-72 h-64 object-cover rounded-t-2xl" src="{{asset('storage/'.$item->image)}}" alt="">
+                <p class="font-semibold text-2xl text-white w-72 text-center mt-3">{{$item->title}}</p>
+                <p class="text-white w-72 text-center mt-6">{{$item->description}}</p>
+                <p class="text-white w-72 text-center mt-6 pb-5"><span>{{$item->location}}</span> | <span>{{$item->date}}</span></p>
             </div>
-            <div class="bg-green-30 rounded-2xl w-fit">
-                <img class="w-72 h-64 object-cover rounded-t-2xl" src="{{asset('assets/image/landing/popular.png')}}" alt="">
-                <p class="font-semibold text-2xl text-white w-72 text-center mt-3">Teaching & Education</p>
-                <p class="text-white w-72 text-center mt-6">Deksripsi Kegiatan</p>
-                <p class="text-white w-72 text-center mt-6 pb-5">SD 01 Bekasi | 28 September 2024</p>
-            </div>
-            <div class="bg-green-30 rounded-2xl w-fit">
-                <img class="w-72 h-64 object-cover rounded-t-2xl" src="{{asset('assets/image/landing/popular.png')}}" alt="">
-                <p class="font-semibold text-2xl text-white w-72 text-center mt-3">Teaching & Education</p>
-                <p class="text-white w-72 text-center mt-6">Deksripsi Kegiatan</p>
-                <p class="text-white w-72 text-center mt-6 pb-5">SD 01 Bekasi | 28 September 2024</p>
-            </div>
+            @endforeach
         </swiper-slide>
         <swiper-slide class="flex items-center justify-center gap-20 w-full">
+            @foreach ($portfolio_chunk[1] as $item)
             <div class="bg-green-30 rounded-2xl w-fit">
-                <img class="w-72 h-64 object-cover rounded-t-2xl" src="{{asset('assets/image/landing/popular.png')}}" alt="">
-                <p class="font-semibold text-2xl text-white w-72 text-center mt-3">Teaching & Education</p>
-                <p class="text-white w-72 text-center mt-6">Deksripsi Kegiatan</p>
-                <p class="text-white w-72 text-center mt-6 pb-5">SD 01 Bekasi | 28 September 2024</p>
+                <img class="w-72 h-64 object-cover rounded-t-2xl" src="{{asset('storage/'.$item->image)}}" alt="">
+                <p class="font-semibold text-2xl text-white w-72 text-center mt-3">{{$item->title}}</p>
+                <p class="text-white w-72 text-center mt-6">{{$item->description}}</p>
+                <p class="text-white w-72 text-center mt-6 pb-5"><span>{{$item->location}}</span> | <span>{{$item->date}}</span></p>
             </div>
-            <div class="bg-green-30 rounded-2xl w-fit">
-                <img class="w-72 h-64 object-cover rounded-t-2xl" src="{{asset('assets/image/landing/popular.png')}}" alt="">
-                <p class="font-semibold text-2xl text-white w-72 text-center mt-3">Teaching & Education</p>
-                <p class="text-white w-72 text-center mt-6">Deksripsi Kegiatan</p>
-                <p class="text-white w-72 text-center mt-6 pb-5">SD 01 Bekasi | 28 September 2024</p>
-            </div>
-            <div class="bg-green-30 rounded-2xl w-fit">
-                <img class="w-72 h-64 object-cover rounded-t-2xl" src="{{asset('assets/image/landing/popular.png')}}" alt="">
-                <p class="font-semibold text-2xl text-white w-72 text-center mt-3">Teaching & Education</p>
-                <p class="text-white w-72 text-center mt-6">Deksripsi Kegiatan</p>
-                <p class="text-white w-72 text-center mt-6 pb-5">SD 01 Bekasi | 28 September 2024</p>
-            </div>
+            @endforeach
         </swiper-slide>
     </swiper-container>
+
+    <div class="whitespace-nowrap overflow-x-auto w-full mt-20 no-scrollbar lg:hidden mb-10">
+        <div class="flex items-center w-full gap-10 mx-6">
+            @foreach ($portfolio as $item)
+            <div class="bg-green-30 rounded-2xl w-fit">
+                <img class="w-72 h-64 object-cover rounded-t-2xl" src="{{asset('storage/'.$item->image)}}" alt="">
+                <p class="font-semibold text-2xl text-white w-72 text-center mt-3">{{$item->title}}</p>
+                <p class="text-white w-72 text-center mt-6">{{$item->description}}</p>
+                <p class="text-white w-72 text-center mt-6 pb-5"><span>{{$item->location}}</span> | <span>{{$item->date}}</span></p>
+            </div>
+            @endforeach
+        </div>
+    </div>
 </div>
 
 <div class="mx-auto 2xl:container mt-20 mb-20">

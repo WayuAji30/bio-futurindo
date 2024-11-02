@@ -54,78 +54,62 @@
         <div class="flex items-center justify-center mt-1.5">
             <div class="bg-green-30 h-2 rounded-full w-full max-w-[238px]"></div>
         </div>
-        <swiper-container class="mySwiper mt-20 mb-16 w-full" pagination="false" navigation="true">
+        <swiper-container class="mySwiper mt-20 mb-16 w-full sm:hidden md:hidden" pagination="false" navigation="true">
             <swiper-slide class="flex items-center justify-between w-full">
+                @foreach ($testimoni_chunk[0] as $item)
+
                 <div class="bg-green-30 px-10 py-5 rounded-2xl min-w-[400px] max-w-[450px] max-h-[250px] mx-5">
                     <div class="flex items-start gap-5">
-                        <img class="rounded-full w-16 h-16 object-cover" src="{{asset('assets/image/landing/bayu.png')}}" alt="avatar">
-                        <p class="text-white font-semibold text-lg">Fuqroni</p>
+                        <img class="rounded-full w-16 h-16 object-cover" src="{{asset('storage/'.$item->image_user)}}" alt="avatar">
+                        <p class="text-white font-semibold text-lg">{{$item->name_user}}</p>
                     </div>
                     <blockquote class="text-white mt-8 line-clamp-4">
                         <q>
-                            Biofuturindo's biogas solutions have transformed the way we manage organic waste. The system not only reduces waste efficiently but also provides clean, renewable energy that has significantly lowered our reliance on LPG. Their commitment to sustainability and innovation has greatly improved our environmental footprint, and we're proud to be partnered with such a forward-thinking company.
+                            {{$item->review_user}}
                         </q>
                     </blockquote>
                 </div>
-                <div class="bg-green-30 px-10 py-5 rounded-2xl min-w-[400px] max-w-[450px] max-h-[250px] mx-5">
-                    <div class="flex items-start gap-5">
-                        <img class="rounded-full w-16 h-16 object-cover" src="{{asset('assets/image/landing/bayu.png')}}" alt="avatar">
-                        <p class="text-white font-semibold text-lg">Fuqroni</p>
-                    </div>
-                    <blockquote class="text-white mt-8 line-clamp-4">
-                        <q>
-                            Biofuturindo's biogas solutions have transformed the way we manage organic waste. The system not only reduces waste efficiently but also provides clean, renewable energy that has significantly lowered our reliance on LPG. Their commitment to sustainability and innovation has greatly improved our environmental footprint, and we're proud to be partnered with such a forward-thinking company.
-                        </q>
-                    </blockquote>
-                </div>
-                <div class="bg-green-30 px-10 py-5 rounded-2xl min-w-[400px] max-w-[450px] max-h-[250px] mx-5">
-                    <div class="flex items-start gap-5">
-                        <img class="rounded-full w-16 h-16 object-cover" src="{{asset('assets/image/landing/bayu.png')}}" alt="avatar">
-                        <p class="text-white font-semibold text-lg">Fuqroni</p>
-                    </div>
-                    <blockquote class="text-white mt-8 line-clamp-4">
-                        <q>
-                            Biofuturindo's biogas solutions have transformed the way we manage organic waste. The system not only reduces waste efficiently but also provides clean, renewable energy that has significantly lowered our reliance on LPG. Their commitment to sustainability and innovation has greatly improved our environmental footprint, and we're proud to be partnered with such a forward-thinking company.
-                        </q>
-                    </blockquote>
-                </div>
+
+                @endforeach
             </swiper-slide>
             <swiper-slide class="flex items-center justify-between w-full">
+                @foreach ($testimoni_chunk[1] as $item)
+
                 <div class="bg-green-30 px-10 py-5 rounded-2xl min-w-[400px] max-w-[450px] max-h-[250px] mx-5">
                     <div class="flex items-start gap-5">
-                        <img class="rounded-full w-16 h-16 object-cover" src="{{asset('assets/image/landing/bayu.png')}}" alt="avatar">
-                        <p class="text-white font-semibold text-lg">Fuqroni</p>
+                        <img class="rounded-full w-16 h-16 object-cover" src="{{asset('storage/'.$item->image_user)}}" alt="avatar">
+                        <p class="text-white font-semibold text-lg">{{$item->name_user}}</p>
                     </div>
                     <blockquote class="text-white mt-8 line-clamp-4">
                         <q>
-                            Biofuturindo's biogas solutions have transformed the way we manage organic waste. The system not only reduces waste efficiently but also provides clean, renewable energy that has significantly lowered our reliance on LPG. Their commitment to sustainability and innovation has greatly improved our environmental footprint, and we're proud to be partnered with such a forward-thinking company.
+                            {{$item->review_user}}
                         </q>
                     </blockquote>
                 </div>
-                <div class="bg-green-30 px-10 py-5 rounded-2xl min-w-[400px] max-w-[450px] max-h-[250px] mx-5">
-                    <div class="flex items-start gap-5">
-                        <img class="rounded-full w-16 h-16 object-cover" src="{{asset('assets/image/landing/bayu.png')}}" alt="avatar">
-                        <p class="text-white font-semibold text-lg">Fuqroni</p>
-                    </div>
-                    <blockquote class="text-white mt-8 line-clamp-4">
-                        <q>
-                            Biofuturindo's biogas solutions have transformed the way we manage organic waste. The system not only reduces waste efficiently but also provides clean, renewable energy that has significantly lowered our reliance on LPG. Their commitment to sustainability and innovation has greatly improved our environmental footprint, and we're proud to be partnered with such a forward-thinking company.
-                        </q>
-                    </blockquote>
-                </div>
-                <div class="bg-green-30 px-10 py-5 rounded-2xl min-w-[400px] max-w-[450px] max-h-[250px] mx-5">
-                    <div class="flex items-start gap-5">
-                        <img class="rounded-full w-16 h-16 object-cover" src="{{asset('assets/image/landing/bayu.png')}}" alt="avatar">
-                        <p class="text-white font-semibold text-lg">Fuqroni</p>
-                    </div>
-                    <blockquote class="text-white mt-8 line-clamp-4">
-                        <q>
-                            Biofuturindo's biogas solutions have transformed the way we manage organic waste. The system not only reduces waste efficiently but also provides clean, renewable energy that has significantly lowered our reliance on LPG. Their commitment to sustainability and innovation has greatly improved our environmental footprint, and we're proud to be partnered with such a forward-thinking company.
-                        </q>
-                    </blockquote>
-                </div>
+
+                @endforeach
             </swiper-slide>
         </swiper-container>
+
+        <div class="whitespace-nowrap overflow-x-auto w-full mt-20 no-scrollbar lg:hidden mb-10">
+            <div class="flex items-center w-full gap-10 mx-6">
+                @foreach ($testimoni as $item)
+
+                <div class="bg-green-30 px-10 py-5 rounded-2xl min-w-[400px] max-w-[450px] max-h-[250px] mx-5">
+                    <div class="flex items-start gap-5">
+                        <img class="rounded-full w-16 h-16 object-cover" src="{{asset('storage/'.$item->image_user)}}" alt="avatar">
+                        <p class="text-white font-semibold text-lg">{{$item->name_user}}</p>
+                    </div>
+                    <blockquote class="text-white mt-8 line-clamp-4">
+                        <q>
+                            {{$item->review_user}}
+                        </q>
+                    </blockquote>
+                </div>
+
+                @endforeach
+            </div>
+        </div>
     </div>
 </section>
 
